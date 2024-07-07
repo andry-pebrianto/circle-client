@@ -24,7 +24,7 @@ export default function Watermark() {
             />
           </Box>
           <Text fontSize={"xs"} marginTop={"20px"} textAlign={"end"} color={"gray.400"}>
-            Copyright &copy; ${new Date().getFullYear()}
+            Copyright &copy; {new Date().getFullYear()}
           </Text>
         </CardBody>
       </Card>
