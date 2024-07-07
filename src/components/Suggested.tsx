@@ -71,7 +71,7 @@ export default function Suggested() {
                             <Box>
                               <Text fontSize={"sm"}>{suggested.fullname}</Text>
                               <Text fontSize={"sm"} color={"gray.400"}>
-                                @{suggested.username}
+                                @{suggested.username.slice(0, 18)}
                               </Text>
                             </Box>
                           </Flex>
