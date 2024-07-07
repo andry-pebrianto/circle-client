@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Circle is a social media website where users can create posts, like posts, delete posts, and comment on these posts. Circle is also accompanied by follow and delete account features.
+Circle is a social media website where users can create posts, like posts, delete posts, and comment on these posts. Circle is also accompanied by follow and delete account features. 
 
 ### Technology Used
 - [ReactJS](https://react.dev/)
