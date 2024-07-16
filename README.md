@@ -42,7 +42,7 @@ API_URL=YOUR_API_URL
 <!-- CONTACT INFO -->
 ## Contact Info
 
-Contributors names and contact info:
+Contributors names and contact info: 
 
 1. Andry Pebrianto
 
