@@ -21,22 +21,22 @@ Circle is a social media website where users can create posts, like posts, delet
 
 - Install Module
 
-`yarn`
+`npm install`
 
 - Setting .env
 
 ```bash
-API_URL=YOUR_API_URL
+API_URL=
 ```
 
 ### Executing program
 
-- Run this project with `yarn run dev`.
+- Run this project with `npm run dev`.
 
 <!-- RELATED PROJECT -->
 ## Related Project
 
-- [Circle API](https://github.com/andry-pebrianto/circle-api)
+- [Circle API](https://github.com/andry-pebrianto/circle-server)
 - [Circle Demo](https://circle-community.netlify.app/)
 
 <!-- CONTACT INFO -->
