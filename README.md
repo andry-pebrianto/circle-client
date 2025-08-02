@@ -37,7 +37,7 @@ API_URL=
 ## Related Project
 
 - [Circle API](https://github.com/andry-pebrianto/circle-server)
-- [Circle Demo](https://circle-community.netlify.app/)
+- [Circle Demo](https://circle.andrypebrianto.com)
 
 <!-- CONTACT INFO -->
 ## Contact Info
