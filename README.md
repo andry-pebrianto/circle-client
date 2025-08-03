@@ -22,7 +22,7 @@ Circle is a social media website where users can create posts, like posts, delet
 - Install Module
 
 `npm install`
-
+ 
 - Setting .env
 
 ```bash
