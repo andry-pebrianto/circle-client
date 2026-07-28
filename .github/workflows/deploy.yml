@@ -1,0 +1,34 @@
+name: Run Github Runners CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+
+      - name: Create .env
+        run: |
+          {
+            echo "API_URL=${{ secrets.API_URL }}"
+          } > .env
+
+      - name: Validate Docker Compose
+        run: docker compose config --quiet
+
+      - name: Run Deploy Script
+        run: docker compose up -d --remove-orphans --build
+
+      - name: Cleanup .env
+        if: always()
+        run: rm -f .env
+
+      - name: Cleanup unused images
+        if: always()
+        run: docker image prune -f

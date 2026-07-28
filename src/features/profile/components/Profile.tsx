@@ -87,7 +87,7 @@ export default function Profile() {
                   <>
                     <Box position={"relative"}>
                       <Image
-                        src="https://assets-global.website-files.com/5a9ee6416e90d20001b20038/635ab99b5920d1d2c6e04397_horizontal%20(66).svg"
+                        src="https://nilabiru-rustfs-s3.andrypebrianto.com/0-global-asset/635ab99b5920d1d2c6e04397_horizontal%20%2866%29.svg"
                         alt="Green Gradient"
                         borderRadius={"10px"}
                         width={"100%"}

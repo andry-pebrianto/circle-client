@@ -33,13 +33,12 @@ export function useEditProfile() {
     });
   }
 
-  async function handleEditProfile(image: string, uplaodId: string) {
+  async function handleEditProfile(image: string) {
     try {
       setIsLoading(true);
 
       if (image) {
         form.profilePicture = image;
-        form.uploadId = uplaodId;
       }
 
       const response = await API.put("/api/v1/user/profile", form, {

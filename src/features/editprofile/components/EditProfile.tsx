@@ -33,7 +33,6 @@ export default function EditProfile() {
   } = useEditProfile();
 
   const [image, setImage] = useState<string>("");
-  const [uploadId, setUploadId] = useState<string>("");
 
   const [imageStatus, setImageStatus] = useState<{
     name: string;
@@ -117,7 +116,6 @@ export default function EditProfile() {
                 imageStatus={imageStatus}
                 setImageStatus={setImageStatus}
                 disabled={isUploadLoading}
-                setUploadId={setUploadId}
               />
             </FormControl>
             <Flex justifyContent={"end"}>
@@ -137,7 +135,7 @@ export default function EditProfile() {
                   borderRadius={"full"}
                   colorScheme="green"
                   mb={3}
-                  onClick={() => handleEditProfile(image, uploadId)}
+                  onClick={() => handleEditProfile(image)}
                 >
                   Edit Profile
                 </Button>

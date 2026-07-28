@@ -73,13 +73,11 @@ export type ThreadDetailType = {
 export type ThreadPostType = {
   content: string;
   image?: string;
-  uploadId?: number;
 };
 
 export type ReplyPostType = {
   content: string;
   image?: string;
-  uploadId?: number;
   threadId?: string;
 };
 // THREAD
@@ -123,6 +121,5 @@ export type EditProfileType = {
   userName: string;
   bio: string;
   profilePicture?: string;
-  uploadId?: string;
 };
 // USER

@@ -36,7 +36,7 @@ API_URL=
 <!-- RELATED PROJECT -->
 ## Related Project
 
-- [Circle API](https://github.com/andry-pebrianto/circle-server)
+- [Circle API](https://github.com/andry-pebrianto/circle-api)
 - [Circle Demo](https://circle.andrypebrianto.com)
 
 <!-- CONTACT INFO -->

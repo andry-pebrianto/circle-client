@@ -11,7 +11,6 @@ interface UploadPropsInterface {
   setIsLoading: Dispatch<SetStateAction<boolean>>;
   fileUpload: string;
   setFileUpload: Dispatch<SetStateAction<string>>;
-  setUploadId: Dispatch<SetStateAction<string>>;
   imageStatus: {
     name: string;
     size: number;
@@ -31,7 +30,6 @@ export default function Upload({
   setIsLoading,
   fileUpload,
   setFileUpload,
-  setUploadId,
   imageStatus,
   setImageStatus,
   disabled,
@@ -61,7 +59,6 @@ export default function Upload({
       })
         .then((response) => {
           setFileUpload(response.data.data.url);
-          setUploadId(response.data.data.uploadId);
         })
         .catch((error) => {
           setFileUpload("");

@@ -28,7 +28,6 @@ export default function ReplyForm({ threadId }: { threadId: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [content, setContent] = useState<string>("");
   const [image, setImage] = useState<string>("");
-  const [uploadId, setUploadId] = useState<string>("");
 
   const [imageStatus, setImageStatus] = useState<{
     name: string;
@@ -55,7 +54,6 @@ export default function ReplyForm({ threadId }: { threadId: string }) {
     };
     if (image) {
       reply.image = image;
-      reply.uploadId = parseInt(uploadId, 10);
     }
 
     mutate(reply);
@@ -126,7 +124,6 @@ export default function ReplyForm({ threadId }: { threadId: string }) {
               imageStatus={imageStatus}
               setImageStatus={setImageStatus}
               disabled={isUploadLoading}
-              setUploadId={setUploadId}
             />
           </ModalBody>
           <ModalFooter>

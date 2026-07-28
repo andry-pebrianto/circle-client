@@ -9,6 +9,8 @@ import { API } from "@/utils/api";
 import { ReplyPostType, ThreadPostType } from "@/types";
 import getError from "@/utils/getError";
 
+const PAGE_SIZE = 10;
+
 // fetch threads
 const fetchThreads = async () => {
   const response = await API.get("/api/v1/threads", {
@@ -43,14 +45,13 @@ export const useInfiniteThreads = () => {
   return useInfiniteQuery({
     queryKey: ["threads-infinite"],
     queryFn: fetchInfiniteThreads,
-    // staleTime: 10000,
     refetchOnWindowFocus: false,
     getNextPageParam: (lastPage, pages) => {
-      if (lastPage.data.length) {
-        return pages.length + 1;
+      if (!lastPage.data.length || lastPage.data.length < PAGE_SIZE) {
+        return undefined;
       }
 
-      return undefined;
+      return pages.length + 1;
     },
     initialPageParam: 1,
   });
@@ -73,7 +74,6 @@ export const usePostThread = (reset: () => void) => {
     mutationFn: postThread,
     onSuccess: () => {
       queryCLient.invalidateQueries({
-        // queryKey: ["threads"],
         queryKey: ["threads-infinite"],
       });
       reset();
@@ -154,7 +154,7 @@ export const usePostLikeDetail = () => {
 };
 // like thread
 
-// like thread
+// delete thread
 const deleteThread = (threadId: string) => {
   return API.delete(`/api/v1/thread/${threadId}`, {
     headers: {
@@ -187,7 +187,7 @@ export const useDeleteThread = () => {
     },
   });
 };
-// like thread
+// delete thread
 
 // detail thread
 const fetchDetailThread = async (threadId: string) => {
