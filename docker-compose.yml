@@ -7,4 +7,4 @@ services:
     container_name: circle-client
     restart: unless-stopped
     ports:
-      - "4001:80"
+      - "4003:80"
