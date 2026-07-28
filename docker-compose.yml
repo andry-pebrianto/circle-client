@@ -1,10 +1,10 @@
 services:
-  koleksi-resep-client:
+  circle-client:
     build:
       context: .
       args:
-        - API_URL:REACT_APP NAME=${REACT APP_NAME}
-    container_name: koleksi-resep-client
+        - API_URL=${API_URL}
+    container_name: circle-client
     restart: unless-stopped
     ports:
       - "4001:80"
